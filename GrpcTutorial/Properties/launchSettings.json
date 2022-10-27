@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "GrpcTutorial": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "httpPort": 51804,
+      "useSSL": true,
+      "sslPort": 44361
+    }
+  }
+}
