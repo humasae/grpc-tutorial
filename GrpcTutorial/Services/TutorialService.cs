@@ -20,8 +20,8 @@ namespace GrpcTutorial
             _logger.LogInformation("Signing person {Name}", request.ToString());
             return Task.FromResult(new PersonReply
             {
-                Name = String.Format("Person name is: %s %s", request.FirstName, request.LastName),
-                Contact = String.Format("Person address is: %s. And email is: %s", request.Address, request.Email)
+                Name = String.Format("Person name is: {0} {1}", request.FirstName, request.LastName),
+                Contact = String.Format("Person address is: {0}. And email is: {1}", request.Address, request.Email)
 
             });
         }
