@@ -6,10 +6,10 @@
     </p>
     <div class="grpc-example">
       <div class="form-group col-4">
-        <input type="text" class="form-control" placeholder="first name" v-model="firstName">
-        <input type="text" class="form-control mt-2" placeholder="last name" v-model="lastName">
-        <input type="text" class="form-control mt-2" placeholder="address" v-model="address">
-        <input type="text" class="form-control mt-2" placeholder="email" v-model="email">
+        <input type="text" name="firstName" class="form-control" placeholder="first name" v-model="firstName">
+        <input type="text" name="secondName" class="form-control mt-2" placeholder="last name" v-model="lastName">
+        <input type="text" name="address" class="form-control mt-2" placeholder="address" v-model="address">
+        <input type="text" name="email" class="form-control mt-2" placeholder="email" v-model="email">
 
         <b-button class="col-2 mt-4" @click="registerPerson()">submmit</b-button>
 

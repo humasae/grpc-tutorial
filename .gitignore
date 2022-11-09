@@ -350,4 +350,5 @@ MigrationBackup/
 .ionide/
 
 
-node_modules/
+nightwatch/
+tests_output/
