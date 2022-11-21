@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: Contract
+  description: yaml contract
+  version: 1.0.0
+servers:
+  - url: http://localhost:8081
+paths:
+  /person:
+    post:
+      summary: get person data concatenated
+      operationId: signPerson
+      tags:
+        - person
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PersonTO"
+      responses:
+        '200':
+          description: Get person
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PersonResponse"
+components:
+  schemas:
+    PersonTO:
+      type: object
+      description: Person info
+      required:
+        - firstName
+        - lastName
+        - address
+        - email
+      properties:
+        firstName:
+          type: "string"
+        lastName:
+          type: "string"
+        address:
+          type: "string"
+        email:
+          type: "string"
+    PersonResponse:
+      type: object
+      description: Person info
+      required:
+        - name
+        - info
+      properties:
+        name:
+          type: "string"
+        info:
+          type: "string"

@@ -150,6 +150,60 @@ protoc src/protos/tutorial.proto --js_out=import_style=commonjs:./ --grpc-web_ou
 
 
 
+
+### Spring-boot Service
+- create new project with initializr, adding spring-web and spring-boot dev tools. pom file looks like this:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>springboot-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot-service</name>
+    <description>springboot-service</description>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+```
+
+
 ## Documentation
 ### GRPC Service  
 - https://docs.microsoft.com/es-es/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-3.0&tabs=visual-studio
@@ -161,3 +215,7 @@ protoc src/protos/tutorial.proto --js_out=import_style=commonjs:./ --grpc-web_ou
 - https://www.geeksforgeeks.org/how-to-install-protocol-buffers-on-windows/
 - https://medium.com/@aravindhanjay/a-todo-app-using-grpc-web-and-vue-js-4e0c18461a3e
 - https://abhinandanaryal.info.np/article/a-complete-walk-through-of-using-grpc-web-using-net-core-server-and-vuejs-client
+
+### Spring-boot openapi service
+- (openapi) https://mydeveloperplanet.com/2022/02/08/generate-server-code-using-openapi-generator/
+- https://tealfeed.com/develop-rest-apis-openapi-spec-using-ue6jw
